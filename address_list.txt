@@ -1,5 +1,4 @@
 {'name': '1', 'age': '1', 'address': '1', 'category': '1'}
-{'name': 'a', 'age': 'a', 'address': 'a', 'category': 'a'}
 {'name': 'b', 'age': 'b', 'address': 'b', 'category': 'b'}
 {'name': 'c', 'age': 'c', 'address': 'c', 'category': 'c'}
 {'name': 'b', 'age': 'b', 'address': 'b', 'category': 'c'}

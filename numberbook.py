@@ -30,12 +30,23 @@ def book_print(dir):
         print('File not exist!!')
 
 
-def save_person(dir,p):
+def save_person(dir):
+    person = {}
+    print('input name : ')
+    person['name'] = input()
+    print('input age : ')
+    person['age'] = input()
+    print('input address : ')
+    person['address'] = input()
+    print('input category : ')
+    person['category'] = input()
     with open(dir,'a') as f:
-        f.write(str(p)+'\n')
+        f.write(str(person)+'\n')
 
 
-def delete_person(dir,n):
+def delete_person(dir):
+    print('Fine person name :')
+    n = input()
     try :
         content = ''
         with open(dir,'r') as f:
@@ -49,7 +60,9 @@ def delete_person(dir,n):
         print('File not exist!!')
 
 
-def search_person(dir,n):
+def search_person(dir):
+    print('Find person name :')
+    n = input()
     try :
         with open(dir,'r') as f:
             for readline in f.readlines():
@@ -73,24 +86,11 @@ while True :
     if a == '1':
         book_print(dir)
     elif a == '2':
-         person ={}
-         print('input name : ')
-         person['name']=input()
-         print('input age : ')
-         person['age']=input()
-         print('input address : ')
-         person['address']=input()
-         print('input category : ')
-         person['category']=input()
-         save_person(dir,person)
+         save_person(dir)
     elif a == '3':
-        print('Fine person name :')
-        name = input()
-        delete_person(dir,name)
+        delete_person(dir)
     elif a == '4':
-        print('Fine person name :')
-        name = input()
-        search_person(dir,name)
+        search_person(dir)
     elif a == '5':
         print('address book Exit')
         break
